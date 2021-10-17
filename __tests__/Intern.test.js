@@ -1,4 +1,4 @@
-const Intern = require('../lib/Intern');
+const Intern = require("../lib/Intern");
 
 describe("Intern", () => {
 
@@ -6,15 +6,21 @@ describe("Intern", () => {
         const intern = new Intern();
         expect(typeof(intern).tobe("object"));
 });
-
+    test("should successfully create intern object with parameters"), () => {
+        const intern = new Intern("fenix", 1127, "fenix@mail.com", "fenix university")
+        expect(typeof(intern.name)).tobe("string");
+        expect(typeof(intern.id)).tobe("number");
+        expect(typeof(intern.email)).tobe("string");
+        expect(typeof(intern.school)).tobe("string");
+};
     test("Successfully sets a name via constructor arguements", () => {
-        const name = "Fenix";
+        const name = "fenix";
         const intern = new Intern(name);
         expect(intern.name).tobe(name);
 });
 
     test("Successfully sets a id via constructor arguments", () =>{
-        const id = "1127";
+        const id = 1127;
         const intern = new Intern(id);
         expect(intern.id).toBe(id);
 });
@@ -33,11 +39,11 @@ describe("Intern", () => {
 
     test("Should get role of intern using getRole", () =>{
         const intern = "employee";
-        const intern = new Intern("Fenix", "1127", "fenix@mail.com", "fenix university");
+        const intern = new Intern("fenix", 1127, "fenix@mail.com", "fenix university");
         expect (intern.getRole()).toBe("Intern");
 });
     test("Should get the intern's school using the getSchool()", () => {
-        const intern = new Intern("Fenix", "1127", "fenix@mail.com", "fenix university");
+        const intern = new Intern("fenix", 1127, "fenix@mail.com", "fenix university");
         expect (intern.getSchool()).toBe("fenix university")
     });
 })
