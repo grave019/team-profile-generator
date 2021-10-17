@@ -1,6 +1,15 @@
 module.exports = {
 
-managerQuestions : [ 
+employeeQuestions: [
+{
+    type:"list",
+    name:"choice",
+    message:"What type of employee would you like to add?",
+    choices:["manager", "engineer", "intern", "none"],
+},
+],
+
+managerQuestions: [ 
 {
     type:"input",
     name:"name",

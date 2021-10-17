@@ -1,11 +1,11 @@
 const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer")
-const Manager = require("./lib/Employee")
-const Intern = require("./lib/Intern")
-const questions = require("./questions")
+const Engineer = require("./lib/Engineer");
+const Manager = require("./lib/Employee");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
+const {employeeQuestions, managerQuestions, engineerQuestions, internQuestions} = require("./src/questions");
 
 
 //controlls choices
