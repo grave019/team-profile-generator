@@ -32,7 +32,7 @@ describe("Engineer", () => {
         expect (engineer.github).tobe(github);
 });
 
-    test("Should get role of engineer", () =>{
+    test("Should get role of engineer using getRole", () =>{
         const engineer = "employee";
         const engineer = new Engineer("Fenix", "1127", "fenix@mail.com", "fenix01");
         expect (engineer.getRole()).toBe("Engineer");
