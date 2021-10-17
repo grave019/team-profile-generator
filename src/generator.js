@@ -16,7 +16,24 @@ class Generator {
                     </div>
                 </div>`
     }
-
+    
+    engineerGenerator = (user) => {
+        return `    <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>${user.name}</h2>
+                            <h3><i class="fas fa-glasses"></i> Engineer</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">ID: ${user.id}</li>
+                                <li class="list-group-item">Email: <a href="mailto:${user.email}" target="_blank">${user.email} </a></li>
+                                <li class="list-group-item">Github: <a href="https://github.com/${user.github}" target="_blank">${user.github}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>`
+    }
 
 }
 
