@@ -2,10 +2,10 @@ module.exports = {
 
 employeeQuestions: [
 {
-    type:"list",
-    name:"choice",
-    message:"What type of employee would you like to add?",
-    choices:["manager", "engineer", "intern", "none"],
+    type:"confirm",
+    name:"manager",
+    message:"Would you like to add a manager?",
+    
 },
 ],
 
@@ -14,24 +14,29 @@ managerQuestions: [
     type:"input",
     name:"name",
     message:"Enter the team manager's Name.",
-    //Validation Here
+    validate: (value) => {if (value) {return true} else
+    {return console.log("Please enter a valid name.")}}
 },
 {
     type:"input",
     name:"id",
     message:"What is the manager's id?",
-    //Validation Here
+    validate: (value) => {if (value) {return true} else
+    {return console.log("Please enter a valid id.")}}
 },
 {
     type:"input",
     name:"email",
-    message:"What is the team Manager's email?"
+    message:"What is the team Manager's email?",
+    validate: (value) => {if (value) {return true} else
+    {return console.log("Please enter a valid email.")}}
 },
 {
     type:"input",
     name:"officeNumber",
     message:"what is the team manager's office number?",
-    //validation here
+    validate: (value) => {if (value) {return true} else
+    {return console.log("Please enter a valid office number.")}}
 }],
 
 engineerQuestions : [ 
