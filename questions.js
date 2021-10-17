@@ -48,5 +48,30 @@ engineerQuestions : [
         name:"github",
         message:"what is the engineers github username?",
         //validation here
-    }]
+    }],
+
+internQuestions : [ 
+        {
+            type:"input",
+            name:"name",
+            message:"Enter the intern's name.",
+            //Validation Here
+        },
+        {
+            type:"input",
+            name:"id",
+            message:"What is the intern's id?",
+            //Validation Here
+        },
+        {
+            type:"input",
+            name:"email",
+            message:"What is the team intern's email?"
+        },
+        {
+            type:"input",
+            name:"school",
+            message:"What is the intern's school?",
+            //validation here
+        }],
 }
