@@ -15,7 +15,7 @@ managerQuestions: [
     name:"name",
     message:"Enter the team manager's Name.",
     validate: (value) => {if (value) {return true} else
-    {return console.log("Please enter a valid name.")}}
+    {return console.log("Please enter a valid manager name.")}}
 },
 {
     type:"input",
@@ -39,29 +39,35 @@ managerQuestions: [
     {return console.log("Please enter a valid office number.")}}
 }],
 
+
 engineerQuestions : [ 
     {
         type:"input",
         name:"name",
         message:"Enter the engineer's name.",
-        //Validation Here
+        validate: (value) => {if (value) {return true} else
+        {return console.log("Please enter a valid name for engineer.")}}
     },
     {
         type:"input",
         name:"id",
         message:"What is the engineer's id?",
-        //Validation Here
+        validate: (value) => {if (value) {return true} else
+        {return console.log("Please enter a valid id for engineer.")}}
     },
     {
         type:"input",
         name:"email",
         message:"What is the team Engineer's email?"
+        validate: (value) => {if (value) {return true} else
+        {return console.log("Please enter a valid email for engineer.")}}
     },
     {
         type:"input",
         name:"github",
         message:"what is the engineers github username?",
-        //validation here
+        validate: (value) => {if (value) {return true} else
+        {return console.log("Please enter a valid github username.")}}
     }],
 
 internQuestions : [ 

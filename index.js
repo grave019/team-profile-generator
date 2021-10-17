@@ -9,6 +9,7 @@ const {employeeQuestions, managerQuestions, engineerQuestions, internQuestions} 
 
 
 //controlls choices
+
 menu = () => {
     inquirer.prompt(questions.managerQuestions).then(({name,id, email, officeNumber}) => {
         const manager = new Manager(name, id, email, officeNumber);
