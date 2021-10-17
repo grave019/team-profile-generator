@@ -75,23 +75,28 @@ internQuestions : [
             type:"input",
             name:"name",
             message:"Enter the intern's name.",
-            //Validation Here
+            validate: (value) => {if (value) {return true} else
+            {return console.log("Please enter a valid name for intern.")}}
         },
         {
             type:"input",
             name:"id",
             message:"What is the intern's id?",
-            //Validation Here
+            validate: (value) => {if (value) {return true} else
+            {return console.log("Please enter a valid id for intern.")}}
         },
         {
             type:"input",
             name:"email",
             message:"What is the team intern's email?"
+            validate: (value) => {if (value) {return true} else
+            {return console.log("Please enter a valid email for intern.")}}
         },
         {
             type:"input",
             name:"school",
             message:"What is the intern's school?",
-            //validation here
+            validate: (value) => {if (value) {return true} else
+            {return console.log("Please enter a valid school for intern.")}}
         }],
 }
