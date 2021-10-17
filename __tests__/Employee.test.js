@@ -6,7 +6,12 @@ describe("Employee", () => {
         const employee = new Employee();
         expect(typeof(employee).toBe("object"));
 });
-
+    test("should creat and Employee object with all parameters", () => {
+        const employee = new Employee("brent", 0531, "brent@mail.com");
+        expect(typeof(employee.name)).toBe("string");
+        expect(typeof(employee.id)).toBe("number");
+        expect(typeof(employee.email)).toBe("string");
+})
     test("Successfully set a name via constructor arguments", () => {
         const name = "Brent";
         const employee = new Employee(name);
@@ -23,19 +28,19 @@ describe("Employee", () => {
         expect (employee.email).toBe(email);
 });
     test("should get the role of the new Employee", () => {
-        const employee = new Employee("brent", "0531", "brent@mail.com");
+        const employee = new Employee("brent", 0531, "brent@mail.com");
         expect(employee.getRole()).toBe("Employee");
 });
     test("should get the name of employee using getName", () => {
-        const employee = new Employee("brent", "0531", "brent@mail.com");
+        const employee = new Employee("brent", 0531, "brent@mail.com");
         expect(employee.getName()).toBe("brent");
     });
     test("should get the id of employee using getId", () => {
-        const employee = new Employee("brent", "0531", "brent@mail.com");
-        expect(employee.getId()).toBe("0531");
+        const employee = new Employee("brent", 0531, "brent@mail.com");
+        expect(employee.getId()).toBe(0531);
     });
     test("should get the email of employee using getEmail", () => {
-        const employee = new Employee("brent", "0531", "brent@mail.com");
+        const employee = new Employee("brent", 0531, "brent@mail.com");
         expect(employee.getEmail()).toBe("brent@mail.com");
     });
 });

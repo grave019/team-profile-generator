@@ -22,13 +22,13 @@ describe("Manager", () => {
         const manager = new Manager(email);
         expect (manager.email).toBe(email);
 });
-test("should get the role of the new Manager", () => {
-    const manager = new Manager("brent", "0531", "brent@mail.com", "39");
-    expect(manager.getRole()).toBe("Manager");
+    test("should get the role of the new Manager", () => {
+        const manager = new Manager("brent", "0531", "brent@mail.com", "39");
+        expect(manager.getRole()).toBe("Manager");
 });
-test("successfully set a office number using officeNumber", () =>{
-    const officeNumber = "39";
-    const manager = new Manager(officeNumber);
-    expect (manager.officeNumber).toBe(officeNumber);
+    test("successfully set a office number using officeNumber", () =>{
+        const officeNumber = "39";
+        const manager = new Manager(officeNumber);
+        expect (manager.officeNumber).toBe(officeNumber);
 });
 });
