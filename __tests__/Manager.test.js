@@ -22,20 +22,13 @@ describe("Manager", () => {
         const manager = new Manager(email);
         expect (manager.email).toBe(email);
 });
+test("successfully set a officeNumber using constructor arguments", () =>{
+    const officeNumber = "39";
+    const manager = new Manager(officeNumber);
+    expect (manager.officeNumber).toBe(officeNumber);
+});
     test("should get the role of the new Manager", () => {
-        const manager = new Manager("brent", "0531", "brent@mail.com");
+        const manager = new Manager("brent", "0531", "brent@mail.com", "39");
         expect(manager.getRole()).toBe("Manager");
 });
-    test("should get the name of manager using getName", () => {
-        const manager = new Manager("brent", "0531", "brent@mail.com");
-        expect(manager.getName()).toBe("brent");
-    });
-    test("should get the id of manager using getId", () => {
-        const manager = new Manager("brent", "0531", "brent@mail.com");
-        expect(manager.getId()).toBe("0531");
-    });
-    test("should get the email of manager using getEmail", () => {
-        const manager = new Manager("brent", "0531", "brent@mail.com");
-        expect(manager.getEmail()).toBe("brent@mail.com");
-    });
 });
