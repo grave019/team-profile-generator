@@ -1,50 +1,38 @@
-const Engineer = require("../lib/Engineer");
+const Engineer = require('../lib/Engineer');
 
-describe("Engineer", () => {
+// start of Engineer Test
+describe('Engineer test', () => {
+    /*
+    - test 1
+    - should set GitHub username account using constructor arguments
+    */
+   it('should set GitHub username account using constructor arguments', () => {
+       const testUserName = "GitHubUser";
+       const eo = new Engineer('gabriel', 101, 'gabriel@mail.com', testUserName);
+       expect(eo.github).toBe(testUserName);
+   });
 
-    test("Successfully instantiates instance of Engineer Class", () =>{
-        const engineer = new Engineer();
-        expect(typeof(engineer).tobe("object"));
+    /*
+    - test 2
+    - should use getRole() and return it as Engineer
+    */
+   describe('getRole', () => {
+       it('should use getRole() and return it as Engineer', () => {
+           const testRole = 'Engineer';
+           const eo = new Engineer('gabriel', 101, 'gabriel@mail.com', 'GitHubUser');
+           expect(eo.getRole()).toBe(testRole);
+       });
+   });
+
+    /*
+    - test 3
+    - should get GitHub username using getGitHub()
+    */
+   describe('getGitHub', () => {
+       it('should get GitHub username using getGitHub()', () => {
+           const testUserName = 'GitHubUser';
+           const eo = new Engineer('gabriel', 101, 'gabriel@mail.com', testUserName);
+           expect(eo.getGithub()).toBe(testUserName);
+       });
+   });
 });
-    test("successfully create engineer object with all parameters", () => {
-        const engineer = new Engineer("fenix", 1127, "fenix@mail.com", "fenix01");
-        expect(typeof(engineer.name)).toBe("string");
-        expect(typeof(engineer.id)).toBe("number");
-        expect(typeof(engineer.email)).toBe("string");
-        expect(typeof(engineer.github)).tobe("string");
-    })
-
-    test("Successfully sets a name via constructor arguements", () => {
-        const name = "fenix";
-        const engineer = new Engineer(name);
-        expect(engineer.name).tobe(name);
-});
-
-    test("Successfully sets a id via constructor arguments", () =>{
-        const id = 1127;
-        const engineer = new Engineer(id);
-        expect(engineer.id).toBe(id);
-});
-
-    test("Successfully set a email via constructor arguments", () =>{
-        const email = "fenix@mail.com";
-        const engineer = new Engineer(email);
-        expect (engineer.email).toBe(email);
-});
-
-    test("Successfully sets a github via constructor arguments", () =>{
-        const github = "fenix01";
-        const engineer = new Engineer(github);
-        expect (engineer.github).tobe(github);
-});
-
-    test("Should get role of engineer using getRole", () =>{
-        const engineer = "employee";
-        const engineer = new Engineer("Fenix", 1127, "fenix@mail.com", "fenix01");
-        expect (engineer.getRole()).toBe("Engineer");
-});
-    test("Should get the github username using the getGithub()", () => {
-        const engineer = new Engineer("Fenix", 1127, "fenix@mail.com", "fenix01");
-        expect (engineer.getGithub()).toBe("fenix01")
-    });
-})

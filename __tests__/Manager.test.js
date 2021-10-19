@@ -1,34 +1,38 @@
-const Manager = require("../lib/Manager");
+const Manager = require('../lib/Manager');
 
-describe("Manager", () => {
+// start of Manager Test
+describe('Manager test', () => {
+    /*
+    - test 1
+    - should set office number using constructor arguments
+    */
+   it('should set office number using constructor arguments', () => {
+       const testOffNum = 210;
+       const eo = new Manager('brent', 101, 'brent@mail.com', testOffNum);
+       expect(eo.officeNumber).toBe(testOffNum);
+   });
 
-    test("successfully instantiates instance of Manager Class", () => {
-        const manager = new Manager();
-        expect(typeof(manager).toBe("object"));
-});
+    /*
+    - test 2
+    - should use getRole() and return it as Manager
+    */
+   describe('getRole', () => {
+       it('should use getRole() and return it as Manager', () => {
+           const testRole = 'Manager';
+           const eo = new Manager('brent', 101, 'brent@mail.com', 210);
+           expect(eo.getRole()).toBe(testRole);
+       });
+   });
 
-    test("Successfully set a name via constructor arguments", () => {
-        const name = "Brent";
-        const manager = new Manager(name);
-        expect(manager.name).toBe(name);
-});
-    test("successfully set a id via constructor arguments", () => {
-        const id = "0531";
-        const manager = new Manager(id);
-        expect(manager.id).toBe(id);
-});
-    test("successfully set a email via constructor arguments", () =>{
-        const email = "brent@mail.com";
-        const manager = new Manager(email);
-        expect (manager.email).toBe(email);
-});
-    test("should get the role of the new Manager", () => {
-        const manager = new Manager("brent", "0531", "brent@mail.com", "39");
-        expect(manager.getRole()).toBe("Manager");
-});
-    test("successfully set a office number using officeNumber", () =>{
-        const officeNumber = "39";
-        const manager = new Manager(officeNumber);
-        expect (manager.officeNumber).toBe(officeNumber);
-});
+    /*
+    - test 3
+    - should get office number by using getOfficeNumber()
+    */
+   describe('getOfficeNumber', () => {
+       it('should get office number by using getOfficeNumber()', () => {
+           const testOffNum = 210;
+           const eo = new Manager('brent', 101, 'brent@mail.com', testOffNum);
+           expect(eo.getOfficeNumber()).toBe(testOffNum);
+       });
+   });
 });
