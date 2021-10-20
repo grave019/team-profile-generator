@@ -18,10 +18,6 @@ describe('Intern test', () => {
        });
    });
 
-    /*
-    - test 3
-    - should get school name using getSchool()
-    */
    describe('getSchool', () => {
        it('should get school name using getSchool()', () => {
            const testSchool = 'UTSA'

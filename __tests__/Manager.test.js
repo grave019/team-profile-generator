@@ -2,10 +2,7 @@ const Manager = require('../lib/Manager');
 
 // start of Manager Test
 describe('Manager test', () => {
-    /*
-    - test 1
-    - should set office number using constructor arguments
-    */
+    
    it('should set office number using constructor arguments', () => {
        const testOffNum = 210;
        const employee = new Manager('brent', 101, 'brent@mail.com', testOffNum);
