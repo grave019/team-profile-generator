@@ -15,7 +15,7 @@ describe('Employee Test', () => {
    it('should set the ID of the employee using constructor arguments', () => {
        const testId = 101;
        const employee = new Employee('brent', testId);
-       expect(eemployee.id).toBe(testId);
+       expect(employee.id).toBe(testId);
    });
 
    it('should set email of employee using constructor arguments', () => {
