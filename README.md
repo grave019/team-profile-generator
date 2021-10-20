@@ -35,11 +35,11 @@
 
   ## Test
 
-  npm test in the --test-- folder.
+  run the command "npm test" in the --test-- folder.
 
   ## Problems
 
-  Getting the html to generate correctly. It became easier after I moved it all to one file. In the future, I would like to enhance my skills and build into a series of files to make it appear cleaner.
+  Getting the html to generate correctly. It became easier after I moved it all to one file. In the future, I would like to enhance my skills and build into a series of files to make it appear cleaner. Also npm test has been difficult to run. 
 
   ## Visualization
 
@@ -47,7 +47,7 @@
 
  Please click the youtube link below to view command line application.
 
- 
+
 
   ## Acknowledgements
 
