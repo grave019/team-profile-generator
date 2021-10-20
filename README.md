@@ -45,12 +45,14 @@
 
  ![index.html image](assets/images/Screen%20Shot%202021-10-19%20at%209.24.52%20PM.png)
 
- Please click the youtube link below to view command line application and the npm test run on the program.
+ Please click the youtube link below to view command line application  
 
 
 https://www.youtube.com/watch?v=Gv8LJHnNnrc
 
- https://youtu.be/qOwvbpeP8xo
+the npm test run on the program.
+
+[ https://youtu.be/qOwvbpeP8xo](https://www.youtube.com/watch?v=U9AgL-YKxPw)
 
   ## Acknowledgements
 
