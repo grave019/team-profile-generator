@@ -8,8 +8,8 @@ describe('Engineer test', () => {
     */
    it('should set GitHub username account using constructor arguments', () => {
        const testUserName = "GitHubUser";
-       const eo = new Engineer('gabriel', 101, 'gabriel@mail.com', testUserName);
-       expect(eo.github).toBe(testUserName);
+       const employee = new Engineer('gabriel', 101, 'gabriel@mail.com', testUserName);
+       expect(employee.github).toBe(testUserName);
    });
 
     /*
@@ -19,8 +19,8 @@ describe('Engineer test', () => {
    describe('getRole', () => {
        it('should use getRole() and return it as Engineer', () => {
            const testRole = 'Engineer';
-           const eo = new Engineer('gabriel', 101, 'gabriel@mail.com', 'GitHubUser');
-           expect(eo.getRole()).toBe(testRole);
+           const employee = new Engineer('gabriel', 101, 'gabriel@mail.com', 'GitHubUser');
+           expect(employee.getRole()).toBe(testRole);
        });
    });
 
@@ -31,8 +31,8 @@ describe('Engineer test', () => {
    describe('getGitHub', () => {
        it('should get GitHub username using getGitHub()', () => {
            const testUserName = 'GitHubUser';
-           const eo = new Engineer('gabriel', 101, 'gabriel@mail.com', testUserName);
-           expect(eo.getGithub()).toBe(testUserName);
+           const employee = new Engineer('gabriel', 101, 'gabriel@mail.com', testUserName);
+           expect(employee.getGithub()).toBe(testUserName);
        });
    });
 });
